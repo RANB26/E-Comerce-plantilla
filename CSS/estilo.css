@@ -1,0 +1,227 @@
+@font-face{
+    font-family: adam;
+    src: url(Adam-Light.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: sora;
+    src: url(Sora-Light.ttf) format('truetype');
+}
+
+*{
+    font-family: sora;
+}
+
+body{
+    background-image: url("/IMG/Fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ---- HEADER ---- */
+.navbar{
+    background-color: black;
+}
+
+.navbar-brand{
+    font-family: adam;
+    letter-spacing: 8px;
+}
+
+.titulo-nav{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+
+/* ---- SLIDER O CARRUSEL ---- */
+
+/* Se utiliza para el responsive */
+.carousel-item{
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+
+
+
+/* ---- SECTION ---- DONDE ENCONTRAMOS CADA UNO DE LOS ARTICULOS */
+section{
+    background-color: rgba(65, 65, 65, 0.566);
+}
+
+
+/* ---- ARTICULO 1 ---- QUIÉNES SOMOS */
+.div-articulo1{
+    background-color:silver;
+    background-size: cover;
+    padding: 30px;
+}
+
+.div-articulo1 p{
+    line-height: 25px;
+}
+
+/* BOTON - EXPLORAR PÁGINA */
+.div-articulo1 .btn{
+    background:wheat;
+    border: none;
+    color:black;
+    border-radius: 0;
+    transition: 0.50s;
+}
+.div-articulo1 .btn:hover{
+    background:rgb(41, 41, 41);
+    color:white;
+}
+
+
+
+/* ---- ARTICULO 2 ---- NUESTROS PRODUCTOS*/
+.articulo2{
+    background-color: rgb(15, 15, 15);
+}
+
+.articulo2 h1{
+    font-family: adam;
+    color: white;
+}
+
+/*ANCHO DE CADA ITEM DEL SLIDER (donde se encuentran 4 productos) */
+.articulo2 .carousel-item{
+    height: fit-content;
+}
+
+/* FLECHAS DEL SLIDER DE PRODUCTOS*/
+.articulo2 .carousel-control-prev, .articulo2 .carousel-control-next{
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 6vh;
+    height: 6vh;
+    top: 50%;
+}
+
+/* CUADROS QUE REPRESENTAN CADA PRODUCTO */
+.articulo2 .card{
+    border: 1px solid white;
+    border-radius: 0;
+    background-color: transparent;
+    color: white;
+    transition: 0.40s;
+}
+.articulo2 .card:hover{
+    background-color: rgba(75, 75, 75, 0.427);
+    cursor: pointer;
+}
+
+/* BOTON DE CADA PRODUCTO - COMPRAR*/
+.articulo2 .btn-producto{
+    border-radius: 0;
+    background-color: transparent;
+    border: solid white 1px;
+    color:white;
+    box-shadow: inset 0 0 0 0 black;
+    transition: 0.3s;
+}
+.articulo2 .btn-producto:hover{
+    box-shadow: inset 140px 0 0 0 black;
+}
+
+/* Se utiliza para volver el slider responsive*/
+@media screen and (min-width: 768px){
+    .articulo2 .cards-wrapper{
+        display: flex;
+        text-align: center;
+    }
+    
+    .articulo2 .card{
+        margin: 0 10px;
+        width: calc(100%/4);
+    }
+
+}
+@media screen and (max-width: 768px){
+    .card:not(:first-child){
+        display: none;
+    }
+
+    
+    .articulo2 .card{
+        margin: 0 auto;
+        width: 65%;
+    }
+}
+
+/* BOTON DE "VER MÁS +" */
+.articulo2 .btn-vermas{
+    background-color: white;
+    border: solid white 1px;
+    color:black;
+    box-shadow: inset 0 0 0 0 black;
+    border-radius: 0;
+    transition: 0.4s;
+}
+.articulo2 .btn-vermas:hover{
+    border: solid white;
+    border: solid white 1px;
+    color: white;
+    box-shadow: inset 300px 0 0 0 black;
+}
+
+
+
+/* ---- ARTICULO 3 ---- APROVECHA LAS OFERTAS*/
+.articulo3{
+    background-color: rgb(44, 44, 44);
+}
+
+.articulo3 h1{
+    font-family: adam;
+    color: white;
+}
+
+/* CUADROS QUE REPRESENTAN CADA PRODUCTO */
+.producto3{
+    color: white;
+    transition: 0.40s;
+}
+.producto3:hover{
+    background-color: rgba(75, 75, 75, 0.427);
+    cursor: pointer;
+}
+
+/* tAMAÑO DE LAS IMAGENES DE CADA PRODUCTO */
+img.imgproductos{
+    width: 100%;
+    height: 100%;
+}
+
+/* BOTON DE CADA PRODUCTO - COMPRAR */
+.articulo3 .btn-producto{
+    border-radius: 0;
+    background-color: transparent;
+    border: solid white 1px;
+    color:white;
+    box-shadow: inset 0 0 0 0 black;
+    transition: 0.3s;
+}
+.articulo3 .btn-producto:hover{
+    box-shadow: inset 200px 0 0 0 black;
+}
+
+
+/* ---- FOOTER ---- */
+footer{
+    background-color:dimgray;
+    color: white;
+}
+
+/* ICONOS */
+footer .bi{
+    font-size: 30px;
+    color: white;
+    font-style: normal;
+}
